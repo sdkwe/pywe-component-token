@@ -26,7 +26,7 @@ class ComponentToken(BaseComponentToken):
         component_access_info = self.post(self.WECHAT_COMPONENT_TOKEN, data={
             'component_appid': self.appid,
             'component_appsecret': self.secret,
-            'component_verify_ticket': component_verify_ticket or get_component_verify_ticket(),
+            'component_verify_ticket': component_verify_ticket or get_component_verify_ticket(storage=self.storage),
         })
         # Request Error
         if 'expires_in' not in component_access_info:
