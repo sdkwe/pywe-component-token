@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 
 import redis_extensions as redis
+from pywe_component_token import ComponentToken, component_access_token, final_component_access_token
 from pywe_storage import RedisStorage
 
 from local_wecfg_example import COMPONENT_VERIFY_TICKET, WECHAT
-from pywe_component_token import ComponentToken, component_access_token, final_component_access_token
 
 
 class TestTokenCommands(object):
